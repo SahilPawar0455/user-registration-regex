@@ -28,4 +28,15 @@ public class UserRegistration {
             lastName();
         }
     }
+    public void emailID(){
+        System.out.println("Enter the Email ID");
+        String emailID = scanner.next();
+        boolean result = (Pattern.matches("^[a-zA-Z\\d+_.-]+@[a-zA-Z]+.[a-zA-z]{2,}", emailID));
+        if(result){
+            user.setEmail(emailID);
+        }else {
+            System.out.println("Invalid Last Name Please try Again");
+            emailID();
+        }
+    }
 }
