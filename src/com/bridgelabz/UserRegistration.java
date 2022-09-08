@@ -39,4 +39,15 @@ public class UserRegistration {
             emailID();
         }
     }
+    public void phoneNumber() {
+        System.out.println("Enter the Phone Number with Country Code ");
+        String phoneNumber = scanner.next();
+        boolean result = (Pattern.matches("^[\\d]{2}[6789]{1}[\\d]{9}", phoneNumber));
+        if (result) {
+            user.setPhoneNumber(phoneNumber);
+        } else {
+            System.out.println("Invalid Phone Number Please try Again");
+            phoneNumber();
+        }
+    }
 }
