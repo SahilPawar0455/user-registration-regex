@@ -17,4 +17,15 @@ public class UserRegistration {
             firstName();
         }
     }
+    public void lastName(){
+        System.out.println("Enter the First Name");
+        String lastName = scanner.next();
+        boolean result = (Pattern.matches("[A-Z]{1,}[a-zA-z]{2,10}", lastName));
+        if (result) {
+            user.setLastName(lastName);
+        } else {
+            System.out.println("Invalid Name please try again");
+            lastName();
+        }
+    }
 }

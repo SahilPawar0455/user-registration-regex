@@ -1,10 +1,12 @@
 package com.bridgelabz;
 
-import java.util.Scanner;
-import java.util.regex.Pattern;
-
 public class User {
    private String firstName;
+   private String lastName;
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -14,6 +16,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
