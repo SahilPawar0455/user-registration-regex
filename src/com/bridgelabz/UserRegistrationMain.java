@@ -8,5 +8,6 @@ public class UserRegistrationMain {
         userRegistration.lastName();
         userRegistration.emailID();
         userRegistration.phoneNumber();
+        userRegistration.password();
     }
 }

@@ -50,4 +50,15 @@ public class UserRegistration {
             phoneNumber();
         }
     }
+    public void password(){
+        System.out.println("Enter the Password");
+        String password = scanner.next();
+        boolean result = Pattern.matches("[a-zA-z\\d]{8,}", password);
+        if (result){
+            user.setPassword(password);
+        }else {
+            System.out.println("Invalid Password Please try again");
+            password();
+        }
+    }
 }
